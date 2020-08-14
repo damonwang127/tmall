@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  datasource: root
+  password: damon127yt
+  url: jdbc:mysql://localhost:3366/tmall?useUnicode=ture&characterEncoding=utf-8&userSSL=ture&serverTime=UTC
+  driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: tmall.pojo
+  check-config-location: classpath:mybatis-config.xml
+
+#show sql
+logging:
+  level:
+    com:
+      exmaple:
+        mapper: debug
