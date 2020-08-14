@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
+/**
+ * 使得生成的Example继承BaseExample
+ */
 public class ExampleExtendsPlugin extends PluginAdapter {
     private String example;
 

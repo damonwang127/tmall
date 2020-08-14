@@ -9,6 +9,9 @@ import org.mybatis.generator.internal.util.StringUtility;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * 使POJO继承BasePOJO
+ */
 public class POJOExtendsPlugin extends PluginAdapter {
     private String POJO;
 

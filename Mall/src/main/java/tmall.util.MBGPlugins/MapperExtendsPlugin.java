@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
+/**
+ * 使Mapper继承BaseMapper
+ */
 public class MapperExtendsPlugin extends PluginAdapter {
     private Set<String> mappers;
 
@@ -28,7 +31,7 @@ public class MapperExtendsPlugin extends PluginAdapter {
     }
 
     @Override
-    public boolean clientGenerated(Interface interfaze, IntrospectedTable introspectedTable) {
+    public boolean clientGenerated(Interface interfaze, TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
         FullyQualifiedJavaType entityType = new FullyQualifiedJavaType(introspectedTable.getBaseRecordType());
         FullyQualifiedJavaType exampleType = new FullyQualifiedJavaType(introspectedTable.getExampleType());
         for(String mapper:mappers){
